@@ -1,11 +1,10 @@
 import streamlit as st
-with st.sidebar:
-    st.title("Video Downloader")
-    if st.button("YouTube"):
-        st.write("https://y2mate.bet/")
-    if st.button("Facebook"):
-        st.write("https://taivideo.vn/")
 st.title("Download and Convert")
-st.image('Img.png',width=400)
-if st.button("Convert"):
+l,m,r = st.columns(3)
+m.image('Img.png',width=400)
+left, right = st.columns(2)
+if left.button("Download",use_container_width=True):
+    st.write("[YouTube](https://y2mate.bet)")
+    st.write("[Facebook](https://taivideo.vn)")
+if right.button("Convert",use_container_width=True):
     st.write("https://cloudconvert.com/")
